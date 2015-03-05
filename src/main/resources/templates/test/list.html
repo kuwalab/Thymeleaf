@@ -5,6 +5,13 @@
   <title>テスト</title>
  </head>
  <body>
-  あいうえお
+  <table>
+   <tr th:each="smartPhone : ${smartPhoneList}">
+    <td th:text="${smartPhone.name}">Galaxy S</td>
+    <td th:text="${smartPhone.ram}">512MB</td>
+    <td th:text="${smartPhone.rom}">16GB</td>
+    <td th:text="${smartPhone.resolution}">800x480</td>
+   </tr>
+  </table>
  </body>
 </html>
