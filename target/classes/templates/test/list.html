@@ -5,8 +5,11 @@
   <title>テスト</title>
  </head>
  <body>
+  <span th:text="#{message.title}">タイトル</span><br />
+  <span th:text="#{message.welcome(${name})}">ようこそほげさん</span>
   <table>
-   <tr th:each="smartPhone : ${smartPhoneList}">
+   <tr th:each="smartPhone, status: ${smartPhoneList}">
+    <td th:text="${status.count}">1</td>
     <td th:text="${smartPhone.name}">Galaxy S</td>
     <td th:text="${smartPhone.ram}">512MB</td>
     <td th:text="${smartPhone.rom}">16GB</td>

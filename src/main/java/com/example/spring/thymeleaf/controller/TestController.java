@@ -29,6 +29,8 @@ public class TestController {
 
 		model.addAttribute("smartPhoneList", smartPhoneList);
 
+		model.addAttribute("name", "テスト　太郎");
+
 		return "test/list";
 	}
 }
